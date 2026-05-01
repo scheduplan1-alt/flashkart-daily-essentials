@@ -34,7 +34,7 @@ export const Footer = () => (
       ))}
     </div>
     <div className="border-t border-white/10 py-5 text-center text-xs text-ink-foreground/50">
-      © {new Date().getFullYear()} Flashkart. All rights reserved.
+      © {new Date().getFullYear()} Flashkart. All rights reserved. Designed & Devloped By Sushant Markad.
     </div>
   </footer>
 );
