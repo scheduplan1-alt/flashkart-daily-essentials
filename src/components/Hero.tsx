@@ -4,20 +4,21 @@ import heroImg from "@/assets/hero-delivery.jpg";
 export const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-hero-gradient text-ink-foreground">
-      <div className="absolute -left-32 top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-primary/20 blur-3xl" />
-      <div className="absolute -right-20 -top-20 h-[320px] w-[320px] rounded-full bg-accent/20 blur-3xl" />
+      <div className="absolute -left-32 top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-primary/25 blur-3xl" />
+      <div className="absolute -right-20 -top-20 h-[320px] w-[320px] rounded-full bg-accent/30 blur-3xl" />
+      <div className="absolute bottom-0 right-1/3 h-[260px] w-[260px] rounded-full bg-warm/20 blur-3xl" />
 
       <div className="container relative mx-auto grid items-center gap-8 px-4 py-12 md:grid-cols-2 md:gap-12 md:py-20">
         <div className="animate-slide-up">
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-primary/15 px-3 py-1.5 text-xs font-semibold text-primary backdrop-blur-sm">
-            <Zap className="h-3.5 w-3.5 fill-primary" />
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-sm">
+            <Zap className="h-3.5 w-3.5 fill-warm text-warm" />
             India's fastest grocery app
           </div>
           <h1 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tighter md:text-6xl lg:text-7xl">
             Groceries.{" "}
-            <span className="bg-bolt-gradient bg-clip-text text-transparent">In a flash.</span>
+            <span className="bg-sunset-gradient bg-clip-text text-transparent">In a flash.</span>
           </h1>
-          <p className="mt-5 max-w-md text-base text-ink-foreground/70 md:text-lg">
+          <p className="mt-5 max-w-md text-base text-ink-foreground/75 md:text-lg">
             Fresh produce, daily essentials & late-night cravings — delivered to your door in
             under 10 minutes.
           </p>
@@ -30,7 +31,7 @@ export const Hero = () => {
         </div>
 
         <div className="relative">
-          <div className="absolute inset-0 -z-10 rounded-[2rem] bg-bolt-gradient/10 blur-2xl" />
+          <div className="absolute inset-0 -z-10 rounded-[2rem] bg-mint-gradient/20 blur-2xl" />
           <img
             src={heroImg}
             alt="Flashkart 10-minute delivery scooter with groceries"
@@ -46,7 +47,7 @@ export const Hero = () => {
 
 const Stat = ({ icon, label, sub }: { icon: React.ReactNode; label: string; sub: string }) => (
   <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-2.5 backdrop-blur-sm">
-    <span className="grid h-8 w-8 place-items-center rounded-lg bg-primary text-primary-foreground">
+    <span className="grid h-8 w-8 place-items-center rounded-lg bg-mint-gradient text-white shadow-mint">
       {icon}
     </span>
     <div className="leading-tight">

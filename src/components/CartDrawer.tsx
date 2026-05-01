@@ -30,18 +30,19 @@ export const CartDrawer = () => {
               <ShoppingBag className="h-9 w-9 text-muted-foreground" />
             </div>
             <h3 className="font-display text-xl font-bold text-ink">Your bag is empty</h3>
-            <p className="mt-1 text-sm text-muted-foreground">
-              Add some essentials to get started
-            </p>
-            <Button onClick={() => setOpen(false)} className="mt-6 rounded-xl bg-ink text-ink-foreground hover:bg-ink/90">
+            <p className="mt-1 text-sm text-muted-foreground">Add some essentials to get started</p>
+            <Button
+              onClick={() => setOpen(false)}
+              className="mt-6 rounded-xl bg-primary text-primary-foreground hover:bg-primary-glow"
+            >
               Start shopping
             </Button>
           </div>
         ) : (
           <>
             {savings > 0 && (
-              <div className="mx-5 mt-4 flex items-center gap-2 rounded-xl bg-primary/15 px-3 py-2 text-xs font-semibold text-ink">
-                <Zap className="h-4 w-4 fill-primary text-primary" />
+              <div className="mx-5 mt-4 flex items-center gap-2 rounded-xl bg-primary/10 px-3 py-2 text-xs font-semibold text-primary">
+                <Zap className="h-4 w-4 fill-primary" />
                 You're saving ₹{savings} on this order!
               </div>
             )}
@@ -57,14 +58,14 @@ export const CartDrawer = () => {
                       <div className="font-display text-sm font-bold text-ink">
                         ₹{i.price * i.qty}
                       </div>
-                      <div className="flex items-center gap-1 rounded-lg bg-ink p-0.5">
+                      <div className="flex items-center gap-1 rounded-lg bg-primary p-0.5 shadow-mint">
                         <Button size="icon" variant="ghost" onClick={() => remove(i.id)}
-                          className="h-6 w-6 rounded text-ink-foreground hover:bg-white/10 hover:text-ink-foreground">
+                          className="h-6 w-6 rounded text-primary-foreground hover:bg-white/15 hover:text-primary-foreground">
                           <Minus className="h-3 w-3" />
                         </Button>
-                        <span className="min-w-[18px] text-center text-xs font-bold text-ink-foreground">{i.qty}</span>
+                        <span className="min-w-[18px] text-center text-xs font-bold text-primary-foreground">{i.qty}</span>
                         <Button size="icon" variant="ghost" onClick={() => add(i)}
-                          className="h-6 w-6 rounded bg-primary text-primary-foreground hover:bg-primary-glow hover:text-primary-foreground">
+                          className="h-6 w-6 rounded text-primary-foreground hover:bg-white/15 hover:text-primary-foreground">
                           <Plus className="h-3 w-3" />
                         </Button>
                       </div>
@@ -83,13 +84,15 @@ export const CartDrawer = () => {
               </div>
               <Button
                 onClick={() => {
-                  toast.success("Order placed! Arriving in 10 mins ⚡", { description: `Total ₹${total}` });
+                  toast.success("Order placed! Arriving in 10 mins ⚡", {
+                    description: `Total ₹${total}`,
+                  });
                   clear();
                   setOpen(false);
                 }}
-                className="mt-4 h-12 w-full rounded-xl bg-bolt-gradient font-display text-base font-bold text-ink shadow-bolt hover:opacity-95"
+                className="mt-4 h-12 w-full rounded-xl bg-sunset-gradient font-display text-base font-bold text-white shadow-coral hover:opacity-95"
               >
-                <Zap className="mr-1 h-4 w-4 fill-ink" /> Checkout · ₹{total}
+                <Zap className="mr-1 h-4 w-4 fill-white" /> Checkout · ₹{total}
               </Button>
             </div>
           </>

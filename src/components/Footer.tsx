@@ -5,8 +5,8 @@ export const Footer = () => (
     <div className="container mx-auto grid gap-10 px-4 py-12 md:grid-cols-4">
       <div>
         <div className="flex items-center gap-2">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-bolt-gradient">
-            <Zap className="h-5 w-5 fill-ink text-ink" />
+          <span className="grid h-9 w-9 place-items-center rounded-xl bg-mint-gradient shadow-mint">
+            <Zap className="h-5 w-5 fill-white text-white" />
           </span>
           <span className="font-display text-xl font-extrabold">
             Flash<span className="text-primary">kart</span>
