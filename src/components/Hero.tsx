@@ -16,7 +16,17 @@ export const Hero = () => {
           </div>
           <h1 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tighter md:text-6xl lg:text-7xl">
             Groceries.{" "}
-            <span className="bg-sunset-gradient bg-clip-text text-transparent">In a flash.</span>
+            <span className="relative inline-block align-bottom">
+              {/* Soft Pulsing Glow */}
+              <span className="absolute -inset-1 rounded-lg bg-gradient-to-r from-orange-500 to-amber-400 opacity-30 blur-lg animate-pulse" />
+              
+              {/* Typewriter Wrapper */}
+              <span className="animate-typewriter relative inline-block pr-1">
+                <span className="bg-gradient-to-r from-orange-500 to-amber-400 bg-clip-text text-transparent font-black">
+                  IN FLASH
+                </span>
+              </span>
+            </span>
           </h1>
           <p className="mt-5 max-w-md text-base text-ink-foreground/75 md:text-lg">
             Fresh produce, daily essentials & late-night cravings — delivered to your door in
